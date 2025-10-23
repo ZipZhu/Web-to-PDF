@@ -1,0 +1,306 @@
+/* 亮色主题（默认） */
+:root {
+  --bg-primary: #f0f2f5;
+  --bg-secondary: #ffffff;
+  --text-primary: #1c1e21;
+  --text-secondary: #606770;
+  --text-tertiary: #8a8d91;
+  --border-color: #dddfe2;
+  --border-light: #f0f2f5;
+  --accent-color: #1877f2;
+  --accent-hover: #e7f3ff;
+  --slider-bg: #ccd0d5;
+  --slider-knob: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --banner-bg: linear-gradient(180deg, #000 8%, #666 125.5%);
+  --banner-text: #9C8667;
+  --banner-button-bg: #E7D9B5;
+  --banner-button-hover: #E3CF9E;
+  --banner-button-active: #DEC78F;
+  --banner-button-disabled: #C0B199;
+  --banner-desc: #9C9C9C;
+}
+
+/* 暗色主题 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #18191a;
+    --bg-secondary: #242526;
+    --text-primary: #e4e6eb;
+    --text-secondary: #b0b3b8;
+    --text-tertiary: #8a8d91;
+    --border-color: #3a3b3c;
+    --border-light: #3a3b3c;
+    --accent-color: #2d88ff;
+    --accent-hover: #263951;
+    --slider-bg: #4e4f50;
+    --slider-knob: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --banner-bg: linear-gradient(180deg, #1a1a1a 8%, #2a2a2a 125.5%);
+    --banner-text: #d4c4a7;
+    --banner-button-bg: #4a4539;
+    --banner-button-hover: #5a5545;
+    --banner-button-active: #6a6551;
+    --banner-button-disabled: #3a3530;
+    --banner-desc: #aaaaaa;
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 40px 0; /* Adjust padding for vertical centering with scroll */
+}
+
+.container {
+  width: calc(100% - 20px);
+  max-width: 680px;
+  min-width: 320px;
+  margin: 0 10px;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.header-logo {
+  width: 52px;
+  height: 52px;
+}
+
+.header-subtitle {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+.header-subtitle:hover {
+  text-decoration: underline;
+}
+
+/* Option Item Styles */
+.option-item {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px var(--shadow-color);
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.option-text {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.option-text h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  color: var(--text-primary);
+}
+
+.option-text p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.tip-text {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-light);
+}
+
+/* Toggle Switch Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--slider-bg);
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: var(--slider-knob);
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--accent-color); /* Blue color for 'on' state */
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#reset-button {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-color);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+#reset-button:hover {
+  background-color: var(--accent-hover);
+}
+
+.status-banner {
+  background: var(--banner-bg);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+#status-text {
+  font-weight: 600;
+  color: var(--banner-text);
+}
+
+.upgrade-button {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--banner-text);
+  background-color: var(--banner-button-bg); /* New button base color */
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+.upgrade-button:hover {
+  background-color: var(--banner-button-hover); /* slightly darker on hover */
+}
+.upgrade-button:active {
+  background-color: var(--banner-button-active); /* deeper shade on active */
+}
+
+.upgrade-button:disabled {
+  background-color: var(--banner-button-bg); /* keep base but dim */
+  color: var(--banner-button-disabled);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pro-badge {
+  color: var(--text-tertiary);
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+/* Status banner layout tweaks */
+.status-banner {
+  gap: 12px;
+  flex-wrap: wrap; /* allow line break for description */
+}
+
+#upgrade-button {
+  margin-left: auto; /* push button to the right */
+}
+
+.status-desc {
+  flex-basis: 100%; /* move description to next line */
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--banner-desc); /* description gray */
+}
+
+/* Status banner: switch to grid layout for perfect alignment */
+.status-banner {
+  display: grid;
+  grid-template-columns: 1fr auto; /* left text block, right button */
+  column-gap: 12px;
+  row-gap: 6px;
+  align-items: center; /* vertically center button across rows */
+}
+
+#status-text {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.status-desc {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#upgrade-button {
+  grid-column: 2;
+  grid-row: 1 / span 2; /* span two rows to align with both lines */
+  align-self: center;    /* vertically center in its grid area */
+  margin-left: 0;        /* override previous auto margin from flex tweaks */
+}
