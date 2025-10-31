@@ -1,0 +1,95 @@
+{
+  "app_name": {
+    "message": "Web to PDF"
+  },
+  "app_description_short": {
+    "message": "One-click webpage to PDF converter for Chrome. Fast, high quality, preserves original layout and formatting.",
+    "description": "Short store description optimized for search: webpage, PDF, converter, one-click, Chrome, preserves layout"
+  },
+  "optionsPageTitle": {
+    "message": "Web to PDF Settings"
+  },
+  "optionsButtonReset": {
+    "message": "Reset to default"
+  },
+  "optionsLangSystem": {
+    "message": "Follow system / 跟随系统"
+  },
+  "optionsLangTitle": {
+    "message": "Language / 语言"
+  },
+  "optionsSaveAsTitle": {
+    "message": "💾 One-Click Auto Save PDF"
+  },
+  "optionsSaveAsDescription": {
+    "message": "When enabled, the PDF will be saved directly to the default download folder without prompting for a path."
+  },
+  "optionsSaveAsTip": {
+    "message": "💡 Tip: Disable for manual save location selection."
+  },
+  "optionsFilenameTitle": {
+    "message": "File Naming Convention"
+  },
+  "optionsFilenameStrategyTitle": {
+    "message": "Generate from webpage title"
+  },
+  "optionsFilenameStrategyUrl": {
+    "message": "Generate from URL"
+  },
+  "optionsFilenameTip": {
+    "message": "💡 Tip: 'Title' is readable, 'URL' prevents duplicates."
+  },
+  "optionsStickerTitle": {
+    "message": "🔗 Record URL at the top of the PDF"
+  },
+  "optionsStickerDescription": {
+    "message": "When enabled, the source URL of the webpage will be displayed at the top of the generated PDF file."
+  },
+  "optionsStickerTip": {
+    "message": "💡 Tip: Disable for a clean PDF."
+  },
+  "optionsPrescrollTitle": {
+    "message": "🖼️ Auto-scroll before capturing webpage"
+  },
+  "optionsPrescrollDescription": {
+    "message": "Ensures all images are fully loaded by scrolling down the page before capture, which is necessary for modern web technologies like lazy loading."
+  },
+  "optionsPrescrollTip": {
+    "message": "💡 Tip: Disable if animations or videos cause capture failures."
+  },
+  "optionsPatchesTitle": {
+    "message": "🖥️ Auto-fix page layout issues"
+  },
+  "optionsPatchesDescription": {
+    "message": "Automatically fixes common page layout issues to ensure content integrity. It's recommended to keep this enabled."
+  },
+  "optionsPatchesTip": {
+    "message": "💡 Tip: Disable if the generated PDF has content anomalies."
+  },
+  "optionsExpandScrollableTitle": {
+    "message": "📖 Auto-expand 'scroll boxes' within the page"
+  },
+  "optionsExpandScrollableDescription": {
+    "message": "Automatically expands all scrollable content areas (like comment sections) to prevent incomplete PDFs."
+  },
+  "optionsExpandScrollableTip": {
+    "message": "💡 Tip: Disable if the page is too long or the PDF is abnormal."
+  },
+  "optionsHideFixedTitle": {
+    "message": "🚫 Auto-hide annoying floating elements"
+  },
+  "optionsHideFixedDescription": {
+    "message": "Automatically shields floating elements that affect reading, such as customer service pop-ups, ads, etc."
+  },
+  "optionsHideFixedTip": {
+    "message": "💡 Tip: Disable to keep fixed elements like chat windows."
+  },
+  "context_convert_page": {
+    "message": "Convert page to PDF",
+    "description": "Context menu: convert current page to PDF"
+  },
+  "banner_converting": {
+    "message": "Converting your page to PDF…",
+    "description": "Status text shown while converting the page to PDF"
+  }
+}
